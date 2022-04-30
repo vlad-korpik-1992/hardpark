@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hard Park</title>
+</head>
+<body>
+    <header class="header header_catalog">
+        <div class="wrapper">
+            <div class="header__box">
+                <div class="logo">
+                    <img class="logo__img" src="img/catalog-logo.svg" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#" class="menu__btn"></a>
+                    <ul class="menu__list">
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Главная</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Профиль</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Войти</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Регистрация</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Инструкция</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <a class="search__link" href="#">
+                        <svg class="search__link__icon">
+                            <use xlink:href="img/sprite.svg#search-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="search__box">
+            <form class="search__form" id="search-form" action="#" method="get">
+                <input class="search__content" type="text" placeholder="Поиск" name="search">
+                <div class="search__selection">
+                    <div class="search__selection__items">
+                        <a class="form__reset" href="">Cброс</a>
+                        <input type="radio" id="title" name="search-options" value="title">
+                        <label for="title">Заголовок</label>
+                        <input type="radio" id="content" name="search-options" value="content">
+                        <label class="search__selection_items" for="content">Текст</label>
+                    </div>
+                    <div class="search__selection__items">
+                        <div class="select__group">
+                            <button class="select__head select__head_region">Область
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_region">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region1">
+                                    <label class="checkbox__group__label" for="region1" value="1">Бретская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region2">
+                                    <label class="checkbox__group__label" for="region2" value="2">Витебская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region3">
+                                    <label class="checkbox__group__label" for="region3" value="3">Гомельская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region4">
+                                    <label class="checkbox__group__label" for="region4" value="4">Гродненская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region5">
+                                    <label class="checkbox__group__label" for="region5" value="5">Минская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region6">
+                                    <label class="checkbox__group__label" for="region6" value="6">Могилевская</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select__group">
+                            <button class="select__head select__head_city">Город
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_city">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city1">
+                                    <label class="checkbox__group__label" for="city1" value="1">Минск</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city2">
+                                    <label class="checkbox__group__label" for="city2" value="2">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city3">
+                                    <label class="checkbox__group__label" for="city3" value="3">Гомель</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city4">
+                                    <label class="checkbox__group__label" for="city4" value="4">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city5">
+                                    <label class="checkbox__group__label" for="city5" value="5">Брест</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city6">
+                                    <label class="checkbox__group__label" for="city6" value="6">Могилев</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="search__btn-submit" id="search-form" type="sub" title="Найти">
+                    <svg class="search__icon">
+                          <use xlink:href="img/sprite.svg#search-form-icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="news">
+        <div class="wrapper">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__box">
+                    <a href="#" class="breadrumbs__link">Главная</a>
+                    <h1 class="breadcrumbs__title">Новости</h1>
+                </div>
+                <div class="breadcrumbs__category">
+                    <img src="img/category-img.png" alt="">
+                </div>
+            </div>
+            <a class="news__box news__box_border news__box_border_first" href="#">
+                <div class="news__box__pic">
+                    <img class="news__box__img" src="img/newsimg.png" alt="">
+                    <div class="news__box__date">29 Апреля 2021</div>
+                </div>
+                <div class="news__box__info">
+                    <h2 class="news__box__title">С другой стороны начало повседневной</h2>
+                    <p class="news__box__content">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же дальнейшее развитие</p>
+                </div>
+            </a>
+            <a class="news__box news__box_border" href="#">
+                <div class="news__box__pic">
+                    <img class="news__box__img" src="img/newsimg.png" alt="">
+                    <div class="news__box__date">29 Апреля 2021</div>
+                </div>
+                <div class="news__box__info">
+                    <h2 class="news__box__title">С другой стороны начало повседневной</h2>
+                    <p class="news__box__content">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же дальнейшее развитие</p>
+                </div>
+            </a>
+            <a class="news__box news__box_smallborder news__box_top" href="#">
+                <div class="news__box__smallpic">
+                    <img class="news__box__img" src="img/newsimgsmall.jpg" alt="">
+                </div>
+                <div class="news__box__smallinfo">
+                    <h2 class="news__box__smalltitle">С другой стороны начало повседневной работы по формированию позиции</h2>
+                    <p class="news__box__content">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же дальнейшее развитие</p>
+                </div>
+            </a>
+            <a class="news__box news__box_smallborder" href="#">
+                <div class="news__box__smallpic">
+                    <img class="news__box__img" src="img/newsimgsmall.jpg" alt="">
+                </div>
+                <div class="news__box__smallinfo">
+                    <h2 class="news__box__smalltitle">С другой стороны начало повседневной работы по формированию позиции</h2>
+                    <p class="news__box__content">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же дальнейшее развитие</p>
+                </div>
+            </a>
+            <a class="news__box news__box_smallborder news__box_bottom" href="#">
+                <div class="news__box__smallpic">
+                    <img class="news__box__img" src="img/newsimgsmall.jpg" alt="">
+                </div>
+                <div class="news__box__smallinfo">
+                    <h2 class="news__box__smalltitle">С другой стороны начало повседневной работы по формированию позиции</h2>
+                    <p class="news__box__content">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития. Задача организации, в особенности же дальнейшее развитие</p>
+                </div>
+            </a>
+            <div class="news__next">
+                <a class="btn-next-post" href="#">Посмотреть всё</a>
+            </div>
+        </div>
+    </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">
+						<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+							<use xlink:href="img/sprite.svg#close_region"></use>
+						</svg>
+					</button>
+                    <div class="popup__title">Ваш регион</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <select class="form__group_select" name="region">
+                                <option value="Бретская">Бретская область</option>
+                                <option value="Витебская">Витебская область</option>
+                                <option value="Гомельская">Гомельская область</option>
+                                <option value="Гродненская">Гродненская область</option>
+                                <option value="Могилевская">Могилевская область</option>
+                                <option value="Минская">Минская область</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <select class="form__group_select" name="city">
+                                <option value="Минск">Минск</option>
+                                <option value="Брест">Брест</option>
+                                <option value="Витебск">Витебск</option>
+                                <option value="Гомель">Гомель</option>
+                                <option value="Гродно">Гродно</option>
+                                <option value="Могилев">Могилев</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <button id="ajax-send" class="form__btn" type="submit">Выбрать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box__items">
+                    <img class="footer__box__logo" src="img/footer_logo.png" alt="">
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Главная</a>
+                    <a class="footer__box__link" href="#">Профиль</a>
+                    <a class="footer__box__link" href="#">Информация</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Аренда и услуги</a>
+                    <a class="footer__box__link" href="#">Ремонт и сервис</a>
+                    <a class="footer__box__link" href="#">Продажа</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link footer__box__link_pb" href="#">Правила пользования сайтом</a>
+                    <div class="footer__box__soc">
+                        <a href="#">
+                            <img class="category__social__img" src="img/vk.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/telegram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copywriting">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+                <p class="footer__copywriting__text">2022, “ХардПарк”</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>

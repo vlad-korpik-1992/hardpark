@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hard Park</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__box">
+                <div class="logo">
+                    <img class="logo__img" src="img/logo-new.png" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#" class="menu__btn"></a>
+                    <ul class="menu__list">
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Главная</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Профиль</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Войти</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Регистрация</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Инструкция</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <a class="search__link" href="#">
+                        <svg class="search__link__icon">
+                            <use xlink:href="img/sprite.svg#search-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="search__box">
+            <form class="search__form" id="search-form" action="#" method="get">
+                <input class="search__content" type="text" placeholder="Поиск" name="search">
+                <div class="search__selection">
+                    <div class="search__selection__items">
+                        <a class="form__reset" href="">Cброс</a>
+                        <input type="radio" id="title" name="search-options" value="title">
+                        <label for="title">Заголовок</label>
+                        <input type="radio" id="content" name="search-options" value="content">
+                        <label class="search__selection_items" for="content">Текст</label>
+                    </div>
+                    <div class="search__selection__items">
+                        <div class="select__group">
+                            <button class="select__head select__head_region">Область
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_region">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region1">
+                                    <label class="checkbox__group__label" for="region1" value="1">Бретская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region2">
+                                    <label class="checkbox__group__label" for="region2" value="2">Витебская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region3">
+                                    <label class="checkbox__group__label" for="region3" value="3">Гомельская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region4">
+                                    <label class="checkbox__group__label" for="region4" value="4">Гродненская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region5">
+                                    <label class="checkbox__group__label" for="region5" value="5">Минская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region6">
+                                    <label class="checkbox__group__label" for="region6" value="6">Могилевская</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select__group">
+                            <button class="select__head select__head_city">Город
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_city">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city1">
+                                    <label class="checkbox__group__label" for="city1" value="1">Минск</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city2">
+                                    <label class="checkbox__group__label" for="city2" value="2">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city3">
+                                    <label class="checkbox__group__label" for="city3" value="3">Гомель</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city4">
+                                    <label class="checkbox__group__label" for="city4" value="4">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city5">
+                                    <label class="checkbox__group__label" for="city5" value="5">Брест</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city6">
+                                    <label class="checkbox__group__label" for="city6" value="6">Могилев</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="search__btn-submit" id="search-form" type="sub" title="Найти">
+                    <svg class="search__icon">
+                          <use xlink:href="img/sprite.svg#search-form-icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="wrapper">
+            <div class="hero__content">
+                <h1 class="hero__title">ПОРТАЛ СПЕЦИАЛЬНОЙ ТЕХНИКИ</h1>
+                <p class="hero__desc">Все виды специальной и строительной техники</p>
+            </div>
+            <!--<ul class="hero__link">
+                <svg class="hero__link-icon hero__link-icon_first">
+                    <use xlink:href="img/sprite.svg#gear"></use>
+                </svg>
+                <svg class="hero__link-icon hero__link-icon_second">
+                    <use xlink:href="img/sprite.svg#gear"></use>
+                </svg>
+                <li class="hero__link-items">
+                    <a href="#">Новости</a>
+                </li>
+                <li class="hero__link-items">
+                    <a href="#">Информация</a>
+                </li>
+            </ul>-->
+            <div class="hero__box">
+                <a class="hero__box__link" href="#">Новости</a>
+                <div class="hero__box__news">
+                    <p class="hero__box__desc">Равным образом новая модель организационной деятельности в значительной степени обуславливает создание систем массового участия.</p>
+                </div>
+                <a class="hero__box__link" href="#">Информация</a>
+            </div>
+        </div>
+        <div class="category">
+            <div class="category__buttons">
+                <button class="category__buttons__block category__buttons__block_first">
+                    <svg class="category__buttons__icon category__buttons__icon_location">
+                        <use xlink:href="img/sprite.svg#location"></use>
+                    </svg>
+                    <p class="category__buttons__title category__buttons__title_fs">вся беларусь</p>
+                </button>
+                <a class="category__buttons__link category__buttons__link_first" href="#">
+                    <img src="img/excavator.svg" alt="">
+                    <p class="category__buttons__title">аренда и услуги</p>
+                </a>
+                <a class="category__buttons__link category__buttons__link_second" href="#">
+                    <svg class="category__buttons__icon">
+                        <use xlink:href="img/sprite.svg#repair"></use>
+                    </svg>
+                    <p class="category__buttons__title">ремонт и сервис</p>
+                </a>
+                <a class="category__buttons__link category__buttons__link_three" href="#">
+                    <svg class="category__buttons__icon">
+                        <use xlink:href="img/sprite.svg#baks"></use>
+                    </svg>
+                    <p class="category__buttons__title">продажа</p>
+                </a>
+                <div class="category__buttons__block category__buttons__block_second"></div>
+            </div>
+            <div class="category__social">
+                <a class="category__social__link" href="#">
+                    <img class="category__social__img" src="img/vk.png" alt="">
+                </a>
+                <a class="category__social__link category__social__link_second" href="#">
+                    <img class="category__social__img" src="img/instagram.png" alt="">
+                </a>
+                <a class="category__social__link category__social__link_three" href="#">
+                    <img class="category__social__img" src="img/telegram.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="ads">
+        <div class="wrapper">
+            <div class="ads__row">
+                <div class="ads__items">
+                    <a class="ads__link" href="#">
+                        <div class="ads__content">
+                            <img class="ads__img" src="img/ad-1.jpg" alt="">
+                            <h2 class="ads__title">Здесь может быть ваша реклама</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="ads__items">
+                    <a class="ads__link" href="#">
+                        <div class="ads__content">
+                            <img class="ads__img" src="img/ad-2.jpg" alt="">
+                            <h2 class="ads__title">Здесь может быть ваша реклама</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="ads__items">
+                    <a class="ads__link" href="#">
+                        <div class="ads__content">
+                            <img class="ads__img" src="img/ad-3.jpg" alt="">
+                            <h2 class="ads__title">Здесь может быть ваша реклама</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">
+						<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+							<use xlink:href="img/sprite.svg#close_region"></use>
+						</svg>
+					</button>
+                    <div class="popup__title">Ваш регион</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <select class="form__group_select" name="region">
+                                <option value="Бретская">Бретская область</option>
+                                <option value="Витебская">Витебская область</option>
+                                <option value="Гомельская">Гомельская область</option>
+                                <option value="Гродненская">Гродненская область</option>
+                                <option value="Могилевская">Могилевская область</option>
+                                <option value="Минская">Минская область</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <select class="form__group_select" name="city">
+                                <option value="Минск">Минск</option>
+                                <option value="Брест">Брест</option>
+                                <option value="Витебск">Витебск</option>
+                                <option value="Гомель">Гомель</option>
+                                <option value="Гродно">Гродно</option>
+                                <option value="Могилев">Могилев</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <button id="ajax-send" class="form__btn" type="submit">Выбрать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box__items">
+                    <img class="footer__box__logo" src="img/footer_logo.png" alt="">
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Главная</a>
+                    <a class="footer__box__link" href="#">Профиль</a>
+                    <a class="footer__box__link" href="#">Информация</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Аренда и услуги</a>
+                    <a class="footer__box__link" href="#">Ремонт и сервис</a>
+                    <a class="footer__box__link" href="#">Продажа</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link footer__box__link_pb" href="#">Правила пользования сайтом</a>
+                    <div class="footer__box__soc">
+                        <a href="#">
+                            <img class="category__social__img" src="img/vk.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/telegram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copywriting">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+                <p class="footer__copywriting__text">2022, “ХардПарк”</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>

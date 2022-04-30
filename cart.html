@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hard Park</title>
+</head>
+<body>
+    <header class="header header_catalog">
+        <div class="wrapper">
+            <div class="header__box">
+                <div class="logo">
+                    <img class="logo__img" src="img/catalog-logo.svg" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#" class="menu__btn"></a>
+                    <ul class="menu__list">
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Главная</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Профиль</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Войти</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Регистрация</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Инструкция</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <a class="search__link" href="#">
+                        <svg class="search__link__icon">
+                            <use xlink:href="img/sprite.svg#search-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="search__box">
+            <form class="search__form" id="search-form" action="#" method="get">
+                <input class="search__content" type="text" placeholder="Поиск" name="search">
+                <div class="search__selection">
+                    <div class="search__selection__items">
+                        <a class="form__reset" href="">Cброс</a>
+                        <input type="radio" id="title" name="search-options" value="title">
+                        <label for="title">Заголовок</label>
+                        <input type="radio" id="content" name="search-options" value="content">
+                        <label class="search__selection_items" for="content">Текст</label>
+                    </div>
+                    <div class="search__selection__items">
+                        <div class="select__group">
+                            <button class="select__head select__head_region">Область
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_region">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region1">
+                                    <label class="checkbox__group__label" for="region1" value="1">Бретская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region2">
+                                    <label class="checkbox__group__label" for="region2" value="2">Витебская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region3">
+                                    <label class="checkbox__group__label" for="region3" value="3">Гомельская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region4">
+                                    <label class="checkbox__group__label" for="region4" value="4">Гродненская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region5">
+                                    <label class="checkbox__group__label" for="region5" value="5">Минская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region6">
+                                    <label class="checkbox__group__label" for="region6" value="6">Могилевская</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select__group">
+                            <button class="select__head select__head_city">Город
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_city">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city1">
+                                    <label class="checkbox__group__label" for="city1" value="1">Минск</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city2">
+                                    <label class="checkbox__group__label" for="city2" value="2">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city3">
+                                    <label class="checkbox__group__label" for="city3" value="3">Гомель</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city4">
+                                    <label class="checkbox__group__label" for="city4" value="4">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city5">
+                                    <label class="checkbox__group__label" for="city5" value="5">Брест</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city6">
+                                    <label class="checkbox__group__label" for="city6" value="6">Могилев</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="search__btn-submit" id="search-form" type="sub" title="Найти">
+                    <svg class="search__icon">
+                          <use xlink:href="img/sprite.svg#search-form-icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="cart">
+        <div class="wrapper">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__box">
+                    <a href="#" class="breadrumbs__link">Главная</a>
+                    <a href="#" class="breadrumbs__link">Аренда</a>
+                    <h1 class="breadcrumbs__title">Продаю трактор</h1>
+                </div>
+            </div>
+            <div class="cart__box">
+                <div class="cart__box__inner">
+                    <button class="catalog__btn catalog__btn_cart catalog__btn_favorit">
+                        <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                            <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <button class="catalog__btn catalog__btn_cart catalog__btn_note cart_note">
+                        <svg class="catalog__icon catalog__icon_rect cart_none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                            <rect class="catalog__icon_rect cart_none" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                            <path class="catalog__icon_rect cart_none" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                        </svg>
+                    </button>
+                    <div class="cart__slider">
+                        <img class="cart__slider__img" src="img/cart-slider.jpg" alt="">
+                        <img class="cart__slider__img" src="img/cart-slider-2.jpg" alt="">
+                    </div>
+                    <div class="cart__date">28.10.2020</div>
+                </div>
+                <div class="cart__box__inner">
+                    <div class="cart__info">Город:<span>Гомель</span></div>
+                    <div class="cart__info">Грузоподъемность:<span>12</span></div>
+                    <div class="cart__info">Длина кузова:<span>56</span></div>
+                    <div class="cart__price">400 BYN</div>
+                    <button class="cart__btn cart__btn_yellow">Написать</button>
+                    <a class="cart__btn cart__btn_white" href="tel:">Позвонить</a>
+                </div>
+            </div>
+            <div class="cart__desc">
+                <div class="cart__desc__title">Описание:</div>
+                <div class="cart__desc__content">Равным образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Таким образом консультация с широким активом требуют определения и уточнения существенных финансовых и административных условий. С другой стороны укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий.</div>
+            </div>
+            <h2 class="section-head">Похожие объявления</h2>
+            <div class="similar__box">
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="section-head">недавно просмотренные</h2>
+            <div class="similar__box similar__box_pb">
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="similar__box__items">
+                    <div class="catalog__free">
+                        <form class="catalog__form" id="1ad4" action="#">
+                            <textarea class="catalog__form__input" name="note" id="note" placeholder="Введите текст заметки"></textarea>
+                            <label class="catalog__form__label" for="#">*Заметка видна только вам</label>
+                            <button class="catalog__form__send" type="send">Сохранить</button>
+                        </form>
+                        <a href="#">
+                            <div class="catalog__img-box">
+                                <div class="catalog__id">358</div>
+                                <p class="watermark">HARDPARK</p>
+                                <button class="catalog__btn catalog__btn_favorit">
+                                    <svg class="catalog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+                                        <path d="M19.2398 7.5782H12.1448L9.99976 1.17236L7.85476 7.5782H0.759766L6.53476 11.4217L4.30726 17.8275L9.99976 13.8239L15.6923 17.8275L13.4648 11.4217L19.2398 7.5782Z" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                                <button class="catalog__btn catalog__btn_note" id="ad4">
+                                    <svg class="catalog__icon catalog__icon_rect" id="ad4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
+                                        <rect class="catalog__icon_rect" id="ad4" x="1.25977" y="3.75415" width="14.68" height="13.5733" rx="0.5" stroke="black"></rect>
+                                        <path class="catalog__icon_rect" id="ad4" d="M6.41332 12.971L7.47248 9.52557C7.47764 9.50878 7.48712 9.49366 7.49998 9.4817L16.3723 1.23564C16.4107 1.19997 16.4701 1.19997 16.5084 1.23564L19.1615 3.70149C19.2041 3.74104 19.2041 3.80842 19.1615 3.84798L10.2986 12.0853C10.2866 12.0965 10.2721 12.1045 10.2562 12.1087L6.53457 13.097C6.45869 13.1172 6.39025 13.046 6.41332 12.971Z" fill="#E7CB22" stroke="black"></path>
+                                    </svg>
+                                </button>
+                                <img class="catalog__img" src="img/catalog-img.jpg" alt="">
+                                <p class="catalog__data">28.10.2020</p>
+                            </div>
+                            <div class="catalog__info">
+                                <h2 class="catalog__title">Продаю грузовик очень хороший</h2>
+                                <p class="catalog__price">400 BYN</p>
+                                <p class="catalog__specif">Город<span>Гомель</span></p>
+                                <p class="catalog__specif">Грузоподемность<span>12</span></p>
+                                <p class="catalog__specif">Длина кузова<span>56</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">
+						<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+							<use xlink:href="img/sprite.svg#close_region"></use>
+						</svg>
+					</button>
+                    <div class="popup__title">Ваш регион</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <select class="form__group_select" name="region">
+                                <option value="Бретская">Бретская область</option>
+                                <option value="Витебская">Витебская область</option>
+                                <option value="Гомельская">Гомельская область</option>
+                                <option value="Гродненская">Гродненская область</option>
+                                <option value="Могилевская">Могилевская область</option>
+                                <option value="Минская">Минская область</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <select class="form__group_select" name="city">
+                                <option value="Минск">Минск</option>
+                                <option value="Брест">Брест</option>
+                                <option value="Витебск">Витебск</option>
+                                <option value="Гомель">Гомель</option>
+                                <option value="Гродно">Гродно</option>
+                                <option value="Могилев">Могилев</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <button id="ajax-send" class="form__btn" type="submit">Выбрать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popupmess">
+        <div class="popupmess__body">
+            <div class="popupmess__content">
+                <div class="popupmess__head">Сообщение</div>
+                <form class="popupmess__form" action="#">
+                    <textarea class="popupmess__form__input" name="messages" id="messages"></textarea>
+                    <div class="popupmess__box-btn">
+                        <div class="popupmess__box-btn__col">
+                            <button class="popupmess__close">Закрыть</button>
+                        </div>
+                        <div class="popupmess__box-btn__col">
+                            <button class="popupmess__send" type="send">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="note">
+        <div class="popupmess__body">
+            <div class="popupmess__content">
+                <div class="popupmess__head">Заметка</div>
+                <form class="popupmess__form" action="#">
+                    <textarea class="popupmess__form__input" name="messages" id="messages"></textarea>
+                    <label class="popupmess__form__label" for="messages">*Заметка видна только вам</label>
+                    <div class="popupmess__box-btn">
+                        <div class="popupmess__box-btn__col">
+                            <button class="popupmess__close_note">Закрыть</button>
+                        </div>
+                        <div class="popupmess__box-btn__col">
+                            <button class="popupmess__send" type="send">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box__items">
+                    <img class="footer__box__logo" src="img/footer_logo.png" alt="">
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Главная</a>
+                    <a class="footer__box__link" href="#">Профиль</a>
+                    <a class="footer__box__link" href="#">Информация</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Аренда и услуги</a>
+                    <a class="footer__box__link" href="#">Ремонт и сервис</a>
+                    <a class="footer__box__link" href="#">Продажа</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link footer__box__link_pb" href="#">Правила пользования сайтом</a>
+                    <div class="footer__box__soc">
+                        <a href="#">
+                            <img class="category__social__img" src="img/vk.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/telegram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copywriting">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+                <p class="footer__copywriting__text">2022, “ХардПарк”</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>

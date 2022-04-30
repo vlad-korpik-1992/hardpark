@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hard Park</title>
+</head>
+<body>
+    <header class="header header_catalog">
+        <div class="wrapper">
+            <div class="header__box">
+                <div class="logo">
+                    <img class="logo__img" src="img/catalog-logo.svg" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#" class="menu__btn"></a>
+                    <ul class="menu__list">
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Главная</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Профиль</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Войти</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Регистрация</a>
+                        </li>
+                        <li class="menu__list__items">
+                            <a class="menu__list__items-link" href="#">Инструкция</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <a class="search__link" href="#">
+                        <svg class="search__link__icon">
+                            <use xlink:href="img/sprite.svg#search-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="search__box">
+            <form class="search__form" id="search-form" action="#" method="get">
+                <input class="search__content" type="text" placeholder="Поиск" name="search">
+                <div class="search__selection">
+                    <div class="search__selection__items">
+                        <a class="form__reset" href="">Cброс</a>
+                        <input type="radio" id="title" name="search-options" value="title">
+                        <label for="title">Заголовок</label>
+                        <input type="radio" id="content" name="search-options" value="content">
+                        <label class="search__selection_items" for="content">Текст</label>
+                    </div>
+                    <div class="search__selection__items">
+                        <div class="select__group">
+                            <button class="select__head select__head_region">Область
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_region">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region1">
+                                    <label class="checkbox__group__label" for="region1" value="1">Бретская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region2">
+                                    <label class="checkbox__group__label" for="region2" value="2">Витебская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region3">
+                                    <label class="checkbox__group__label" for="region3" value="3">Гомельская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region4">
+                                    <label class="checkbox__group__label" for="region4" value="4">Гродненская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region5">
+                                    <label class="checkbox__group__label" for="region5" value="5">Минская</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="region[]" id="region6">
+                                    <label class="checkbox__group__label" for="region6" value="6">Могилевская</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select__group">
+                            <button class="select__head select__head_city">Город
+                                <svg class="select__icon">
+                                    <use xlink:href="img/sprite.svg#select-down"></use>
+                                </svg>
+                            </button>
+                            <div class="checkbox__group checkbox__group_city">
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city1">
+                                    <label class="checkbox__group__label" for="city1" value="1">Минск</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city2">
+                                    <label class="checkbox__group__label" for="city2" value="2">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city3">
+                                    <label class="checkbox__group__label" for="city3" value="3">Гомель</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city4">
+                                    <label class="checkbox__group__label" for="city4" value="4">Гродно</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city5">
+                                    <label class="checkbox__group__label" for="city5" value="5">Брест</label>
+                                </div>
+                                <div class="checkbox__group__items">
+                                    <input class="checkbox__group__input" type="checkbox" name="city[]" id="city6">
+                                    <label class="checkbox__group__label" for="city6" value="6">Могилев</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="search__btn-submit" id="search-form" type="sub" title="Найти">
+                    <svg class="search__icon">
+                          <use xlink:href="img/sprite.svg#search-form-icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="profile">
+        <div class="wrapper">
+            <div class="breadcrumbs__box">
+                <a href="#" class="breadrumbs__link">Главная</a>
+                <h1 href="#" class="breadcrumbs__title">Мой профиль</h1>
+            </div>
+            <div class="profile__box">
+                <div class="profile__cart">
+                    <div class="profile__cart__bg">
+                        <div class="profille__cart__pic">
+                            <img class="profile__cart__img" src="img/avatar.jpg" alt="">
+                        </div>
+                        <div class="profile__cart__box">
+                            <div class="profile__cart__head">
+                                <p class="profile__cart__name">Игнат</p>
+                                <p class="profile__cart__info">Телефон:<span> +375857349</span></p>
+                                <p class="profile__cart__info">E-mail:<span> dfiodioriretret</span></p>
+                                <p class="profile__cart__info">Город:<span> Минск</span></p>
+                            </div>
+                            <a class="profile__cart__edit" href="#">Редактировать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__sidebar">
+                    <a href="#" class="profile__sidebar__menu"></a>
+                    <ul class="profile__sidebar__list">
+                        <li class="profile__sidebar__items">
+                            <a class="profile__sidebar__link" href="#">Мой профиль</a>
+                            <svg class="profile__sidebar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M10 8.625C10 10.2128 8.71282 11.5 7.125 11.5C5.53718 11.5 4.25 10.2128 4.25 8.625C4.25 7.03718 5.53718 5.75 7.125 5.75C8.71282 5.75 10 7.03718 10 8.625Z" fill="#1D1C1C" stroke="white"></path>
+                                <path d="M7.125 13.4375C7.88742 13.4375 8.87347 13.5851 9.85147 13.9374C9.29599 14.2992 8.81914 14.7048 8.43744 15.1381C7.71473 15.9579 7.28125 16.9646 7.28125 17.9967V18.25H1.25V16.7812C1.25 15.8096 2.07146 14.9737 3.37052 14.3492C4.63685 13.7403 6.15669 13.4375 7.125 13.4375Z" fill="#1D1C1C" stroke="white"></path>
+                                <path d="M9.125 18C9.125 16.8062 10.1034 15.8078 11.5871 15.0763C13.0425 14.3587 14.7951 14 15.9375 14C17.0799 14 18.8325 14.3587 20.2879 15.0763C21.7716 15.8078 22.75 16.8062 22.75 18V19.75H9.125V18Z" fill="#1D1C1C" stroke="white"></path>
+                                <path d="M19.5625 7.875C19.5625 9.87703 17.9395 11.5 15.9375 11.5C13.9355 11.5 12.3125 9.87703 12.3125 7.875C12.3125 5.87297 13.9355 4.25 15.9375 4.25C17.9395 4.25 19.5625 5.87297 19.5625 7.875Z" fill="#1D1C1C" stroke="white"></path>
+                            </svg>
+                        </li>
+                        <li class="profile__sidebar__items">
+                            <a class="profile__sidebar__link" href="#">Мои объявления</a>
+                            <svg class="profile__sidebar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g clip-path="url(#clip0_0_1725)">
+                                    <path d="M4.52325 14.0417C4.31293 13.8896 4.10618 13.7375 3.90338 13.5855C4.64422 17.3789 7.99256 20.2499 12 20.2499C12.9152 20.251 13.8223 20.0988 14.6843 19.8012C14.4511 19.7021 14.2157 19.5996 13.9786 19.4938M4.52325 14.0417C5.42105 17.3276 8.4332 19.7499 12 19.7499H12.0006C12.67 19.7507 13.3348 19.6641 13.9786 19.4938M4.52325 14.0417C4.45713 13.7997 4.40248 13.553 4.35992 13.3023C5.86574 14.4201 7.58502 15.5451 9.36188 16.5679M4.52325 14.0417C5.93101 15.0594 7.49879 16.0724 9.11244 17.0012M13.9786 19.4938C14.2225 19.4292 14.4634 19.3527 14.7003 19.2643C12.9954 18.5301 11.1781 17.6143 9.36188 16.5679M13.9786 19.4938C12.4087 18.7934 10.7591 17.95 9.11244 17.0012M9.11244 17.0012L9.36188 16.5679M9.11244 17.0012C9.11238 17.0012 9.11232 17.0012 9.11226 17.0011L9.36188 16.5679" fill="#1D1C1C" stroke="white"></path>
+                                    <path d="M22.6966 16.2151L22.6965 16.2149C22.4452 15.8805 22.1307 15.5178 21.758 15.1332C21.7006 15.3112 21.6383 15.4877 21.5711 15.6623C22.1313 16.2639 22.4842 16.7503 22.6982 17.1257C22.8186 17.337 22.8998 17.5214 22.9473 17.6778C22.971 17.7558 22.9887 17.8347 22.9966 17.9118C23.0034 17.9789 23.0075 18.0874 22.9695 18.2022L22.9367 18.3012L22.8671 18.3788C22.7909 18.4637 22.701 18.513 22.6421 18.5406C22.5745 18.5723 22.5001 18.5972 22.4224 18.6168C22.2665 18.656 22.0694 18.6808 21.827 18.6846C21.3414 18.6921 20.6379 18.6156 19.6462 18.3642L19.6461 18.3642C19.3608 18.2918 19.0508 18.2042 18.7167 18.1016L18.7164 18.1015C18.4998 18.0349 18.2793 17.963 18.0549 17.8861L17.3515 17.645L17.8401 17.0845C18.1644 16.7126 18.4526 16.3107 18.7008 15.8843L18.7016 15.8829C18.7116 15.8658 18.7147 15.8609 18.7166 15.8578C18.7182 15.8552 18.719 15.8539 18.7223 15.848L18.7238 15.8455C19.396 14.6753 19.7498 13.3494 19.75 11.9999V11.9997C19.7502 11.7201 19.7355 11.4408 19.706 11.1628C19.2843 7.28058 15.9881 4.25 12 4.25H11.9997C10.3073 4.24905 8.66156 4.80419 7.31556 5.83002L7.3153 5.83021C6.50012 6.45066 5.81488 7.2253 5.29855 8.11006C5.29214 8.12148 5.28626 8.13143 5.28215 8.13834L5.27233 8.15483C5.02769 8.58144 4.82434 9.03043 4.66506 9.4957L4.42422 10.1992L3.86357 9.71075C3.68544 9.55556 3.51327 9.40127 3.34709 9.24787L3.34619 9.24704C3.08918 9.00862 2.85889 8.78568 2.65242 8.5734C1.939 7.84329 1.5207 7.27395 1.28402 6.85073C1.1658 6.63935 1.08848 6.45658 1.04432 6.30221C1.02229 6.22521 1.00651 6.14837 1.00006 6.07389C0.994467 6.00925 0.99199 5.90633 1.02762 5.79752L1.05999 5.69868L1.12909 5.62094C1.20933 5.53067 1.30517 5.48002 1.36633 5.45242C1.43677 5.42064 1.51377 5.39644 1.59304 5.37781C1.75207 5.34045 1.95229 5.31811 2.19575 5.31627C2.62866 5.31299 3.22807 5.37441 4.03251 5.55835C4.15065 5.41264 4.27271 5.27019 4.39855 5.13116C3.86122 4.99719 3.37503 4.9049 2.94942 4.85563C1.55173 4.69557 0.896806 5.00359 0.636746 5.45339L0.636281 5.45419C0.543838 5.6134 0.427315 5.92294 0.55926 6.41401L0.55938 6.41446C0.771717 7.20766 1.57279 8.26543 2.83784 9.45624L2.83799 9.45638C3.23304 9.82853 3.66636 10.2073 4.13054 10.5889C4.46855 10.8659 4.82364 11.1461 5.18934 11.4248C5.43371 11.6102 5.68328 11.7956 5.93805 11.9811C6.19149 12.1657 6.44834 12.3468 6.7086 12.5247L6.71135 12.5265C7.89046 13.3437 9.13726 14.129 10.36 14.8335L22.6966 16.2151ZM22.6966 16.2151C23.5603 17.3633 23.6238 18.0936 23.3606 18.5459L23.3597 18.5475C23.1468 18.9165 22.6808 19.188 21.75 19.188H21.673C20.9372 19.174 19.9705 18.9981 18.7886 18.6463L18.738 18.6311L18.7379 18.6311C18.2369 18.4809 17.7091 18.3021 17.1603 18.0981L17.1599 18.0979C16.7719 17.954 16.3747 17.7977 15.9681 17.6287L15.9678 17.6286M22.6966 16.2151L15.9678 17.6286M15.9678 17.6286C15.0192 17.235 14.0248 16.7752 13.0072 16.2641C12.5722 16.0456 12.1335 15.8165 11.691 15.577C11.248 15.3373 10.8044 15.0894 10.3601 14.8335L15.9678 17.6286Z" fill="#1D1C1C" stroke="white"></path>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_0_1725">
+                                      <rect width="24" height="24" fill="white"></rect>
+                                    </clipPath>
+                                  </defs>
+                            </svg>
+                        </li>
+                        <li class="profile__sidebar__items">
+                            <a class="profile__sidebar__link" href="#">Сообщения</a>
+                            <div class="profile__sidebar__left">
+                                <div class="profile__sidebar__col">3</div>
+                                <svg class="profile__sidebar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                                    <path d="M20.787 8.78584L20.7868 8.78457C20.3265 6.61907 19.1047 4.64373 17.3432 3.22621C15.5405 1.78404 13.3003 0.998861 10.9917 1L10.9915 1C8.26715 1 5.72784 2.04837 3.8287 3.95096L20.787 8.78584ZM20.787 8.78584C20.9287 9.44397 21 10.1153 20.9999 10.7885V10.7886M20.787 8.78584L20.9999 10.7886M2.58288 16.0662C1.55033 14.4977 0.99996 12.661 0.9999 10.783L0.999895 10.7814C0.991878 8.2163 1.99437 5.79111 3.82865 3.95101L2.58288 16.0662ZM2.58288 16.0662L2.78085 16.3415L2.91306 16.5254L2.86205 16.7461L1.92077 20.8179L6.51044 19.676L6.65177 19.6409L6.78988 19.6871L6.63115 20.1613L6.7899 19.6871L6.78992 19.6871L6.78996 19.6871L6.79008 19.6872L6.79043 19.6873L6.7916 19.6877L6.79568 19.6891L6.81019 19.694L6.85919 19.7108C6.89767 19.7242 6.95021 19.7428 6.99722 19.7608L6.99918 19.7615C7.08535 19.7945 7.74799 20.0479 8.44627 20.2432C9.0264 20.405 10.2363 20.6466 11.1602 20.6466C13.8243 20.6466 16.3066 19.6161 18.1558 17.7456L2.58288 16.0662ZM20.9999 10.7886C20.9999 13.4203 19.9898 15.8883 18.156 17.7454L20.9999 10.7886Z" fill="#1D1C1C" stroke="white"></path>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="profile__sidebar__items">
+                            <a class="profile__sidebar__link" href="#">Заметки</a>
+                            <svg class="profile__sidebar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+                                <rect x="0.5" y="4.50684" width="19.3633" height="19.9931" rx="0.5" stroke="white"></rect>
+                                <path d="M7.32152 18.0709L8.72114 13.0207C8.72562 13.0046 8.73407 12.9898 8.74573 12.9778L20.2924 1.074C20.3316 1.0335 20.3966 1.0335 20.4359 1.074L23.9329 4.67916C23.9705 4.71795 23.9705 4.77962 23.9329 4.81841L12.3826 16.726C12.3706 16.7384 12.3556 16.7474 12.339 16.7523L7.44615 18.1935C7.37088 18.2157 7.30057 18.1465 7.32152 18.0709Z" fill="#1D1C1C" stroke="white"></path>
+                            </svg>
+                        </li>
+                        <li class="profile__sidebar__items">
+                            <a class="profile__sidebar__link" href="#">Избранное</a>
+                            <div class="profile__sidebar__left">
+                                <div class="profile__sidebar__col">6</div>
+                                <svg class="profile__sidebar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                                    <path d="M25 10.2308H15.7857L13 1L10.2143 10.2308H1L8.5 15.7692L5.60714 25L13 19.2308L20.3929 25L17.5 15.7692L25 10.2308Z" stroke="white" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <button class="popup__header_close">
+						<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+							<use xlink:href="img/sprite.svg#close_region"></use>
+						</svg>
+					</button>
+                    <div class="popup__title">Ваш регион</div>
+                </div>
+                <div class="popup__text">
+                    <form class="ajax__form" method="post" id="ajax__form">
+                        <div class="form__group">
+                            <select class="form__group_select" name="region">
+                                <option value="Бретская">Бретская область</option>
+                                <option value="Витебская">Витебская область</option>
+                                <option value="Гомельская">Гомельская область</option>
+                                <option value="Гродненская">Гродненская область</option>
+                                <option value="Могилевская">Могилевская область</option>
+                                <option value="Минская">Минская область</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <select class="form__group_select" name="city">
+                                <option value="Минск">Минск</option>
+                                <option value="Брест">Брест</option>
+                                <option value="Витебск">Витебск</option>
+                                <option value="Гомель">Гомель</option>
+                                <option value="Гродно">Гродно</option>
+                                <option value="Могилев">Могилев</option>
+                                <option value="Минск">Минск</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <button id="ajax-send" class="form__btn" type="submit">Выбрать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__box__items">
+                    <img class="footer__box__logo" src="img/footer_logo.png" alt="">
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Главная</a>
+                    <a class="footer__box__link" href="#">Профиль</a>
+                    <a class="footer__box__link" href="#">Информация</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link" href="#">Аренда и услуги</a>
+                    <a class="footer__box__link" href="#">Ремонт и сервис</a>
+                    <a class="footer__box__link" href="#">Продажа</a>
+                </div>
+                <div class="footer__box__items">
+                    <a class="footer__box__link footer__box__link_pb" href="#">Правила пользования сайтом</a>
+                    <div class="footer__box__soc">
+                        <a href="#">
+                            <img class="category__social__img" src="img/vk.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/instagram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img class="category__social__img" src="img/telegram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copywriting">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <use xlink:href="img/sprite.svg#copy"></use>
+                </svg>
+                <p class="footer__copywriting__text">2022, “ХардПарк”</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>
